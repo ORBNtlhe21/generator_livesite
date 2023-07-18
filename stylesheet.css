@@ -1,0 +1,35 @@
+.mainDiv{
+    display:block;
+    text-align: center;
+    border: 2px solid blue;
+    width: 30em;
+    height: 17em;
+    margin: 55px;
+    margin-left: 10em;
+}
+
+label{
+    font-size: x-large;
+
+}
+
+#name{
+    border: 2px solid blue;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 15em;
+    text-align: center;
+    font-size: medium;
+}
+
+#submit, #clear{
+    margin: 13px;
+    border: 2px solid blue;
+    padding: 5px;
+    width: 6em;
+    height: 3em;
+    font-size: medium;
+    border-radius: 10px;
+}
+

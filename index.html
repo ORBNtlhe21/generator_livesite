@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+   <div class="mainDiv">
+        <h1><i>Password Generator</i></h1>
+        <hr/>
+        <label for="name">Enter your Name:</label>
+        <input type="text" id="name" required ><br>
+
+        <button id="submit">Submit</button>
+        <button id="clear">Clear</button><br>
+        <label id="answer">Your Password</label><br>
+    </div>
+    <script>
+        
+        document.getElementById("submit").onclick = function(){
+            let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789}{/_}*@#%$^&";
+            let password = "";
+
+            for(let i = 0; i < 8; i++){
+                let randNum = Math.floor(Math.random() * letters.length);
+                password += letters.charAt(randNum);
+            }
+
+            let name = document.getElementById("name").value;
+            document.getElementById("answer").innerHTML = `${name}'s password: ${password}`;
+        }
+        
+        document.getElementById("clear").onclick = function(){
+            document.getElementById("name").value = "";
+            document.getElementById("answer").innerHTML = "Your Password";
+        }
+
+    </script>
+</body>
+</html>
